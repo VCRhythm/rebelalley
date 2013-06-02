@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Next:</b>
+  <%= @path.next %>
+</p>
+
+<p>
+  <b>Prev:</b>
+  <%= @path.prev %>
+</p>
+
+<p>
+  <b>Clip:</b>
+  <%= @path.clip_id %>
+</p>
+
+<p>
+  <b>Video:</b>
+  <%= @path.video_id %>
+</p>
+
+<p>
+  <b>When:</b>
+  <%= @path.when %>
+</p>
+
+
+<%= link_to 'Edit', edit_path_path(@path) %> |
+<%= link_to 'Back', paths_path %>

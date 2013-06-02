@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<video autoplay id="myVideo"></video>
+<p id="clips" data-length='<%=@video.length%>'>
+  <b>Clips:</b>
+  <% @video.paths.each do |path| %>
+    <span id='vidUrl<%=@videoCount%>' data-start='<%=path.start%>' data-end='<%=path.end%>'><%= path.clip.url %></span>
+    <% @videoCount+=1 %>
+  <% end %>
+<p>
+  <b>Name:</b>
+  <%= @video.name %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @video.author %>
+</p>
+
+<p>
+  <b>Vote:</b>
+  <%= @video.vote %>
+</p>

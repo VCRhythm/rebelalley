@@ -1,0 +1,10 @@
+class CreateSurveyResults < ActiveRecord::Migration
+  def change
+		drop_table :survey_results
+    create_table :survey_results do |t|
+      t.string :content
+
+      t.timestamps
+    end
+  end
+end

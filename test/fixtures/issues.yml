@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: issues
+#
+#  id          :integer          not null, primary key
+#  name        :string(255)
+#  description :text
+#  link        :string(255)
+#  category    :string(255)
+#  rank        :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  link: MyString
+  category: MyString
+  rank: 1
+
+two:
+  name: MyString
+  description: MyText
+  link: MyString
+  category: MyString
+  rank: 1

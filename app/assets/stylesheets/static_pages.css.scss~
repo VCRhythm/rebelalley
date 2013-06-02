@@ -1,0 +1,119 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap";
+
+html,
+body{
+	height: 100%;
+	background-image: url('LoT_icon.png');	
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:right 85%;
+	background-color:rgb(238,238,238);
+}
+
+#wrap{
+	min-height:100%;
+	height: auto !important;
+	height:100%;
+	margin: 0 auto -60px;
+}
+
+#push,
+#footer{
+	height:60px;
+}
+
+#footer{
+	background-color: white;
+	padding-top:20px;
+	padding-left:100px;
+}
+
+#footer .muted{
+	font-size:30px;
+}
+
+@media(max-width:767px){
+	#footer{
+		margin-left:-20px;
+		margin-right:-20px;
+		padding-left:20px;
+		padding-right:20px;
+	}
+}
+
+.excited-item{
+	float:right;
+	margin-right:20px;
+}
+
+.worried-item{
+	margin-left:20px;
+	float:left;
+}
+
+.worried-list{
+	display:none;
+}
+
+.excited-list{
+	display:none;
+}
+.hero-unit{
+	margin-bottom:0px;
+	padding-bottom:0px;
+}
+#item_content.worried-add{
+	margin-left:20px;
+	margin-top:18px;
+	padding:12px;
+	color:white;
+	background-color:black;
+	font-size:20px;
+	float:left;
+}
+
+#email-form{
+	padding: 0 10px;
+	margin-top:20px; 
+}
+#item_content.excited-add{
+	float:right;
+	margin-right:20px;
+	margin-top:18px;
+	padding:12px;
+	color:white;
+	background-color:black;
+	font-size:20px;
+}
+
+
+.btn.survey2.worried-item{
+	font-size:20px;
+	padding:10px;
+	margin:20px 0 0 20px;
+	}
+
+.btn.survey2.excited-item{
+	font-size:20px;
+	padding:10px;
+	margin:20px 20px 0 0;
+	}
+
+.survey1{
+	font-size:80px;
+	padding:40px;
+	border: white solid 10px;
+}
+
+.survey1-group{
+	width:100%;
+	margin-top:20px;
+}
+
+.span6{
+	text-align:center;
+}

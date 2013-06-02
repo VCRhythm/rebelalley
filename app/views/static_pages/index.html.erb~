@@ -1,0 +1,15 @@
+<div class="row-fluid">
+	<div class="span12">
+		<div class="hero-unit"><h1 id="question-text">How do you feel about the Internet of Things?</h1></div>
+	</div>
+</div>
+<div class="row-fluid">
+	<div class="span12">
+		<%= render 'questionnaire' %>
+	</div>
+</div>
+<div class="row-fluid">
+	<div class="span7" id="email-form">
+		<%= render 'visitors/form' %>
+	</div>
+</div>

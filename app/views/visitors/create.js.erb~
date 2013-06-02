@@ -1,0 +1,1 @@
+$('#email-form').html("<h2>Thanks- We'll be in touch</h2>")

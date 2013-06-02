@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Iot</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div id="wrap">
+		<%= yield %>
+		<div id="push"></div>
+	</div>
+	<div id="footer">
+		<div class="row-fluid">
+			<div class="span12">
+				<p class="muted credit">Law of Things LLP <span style="margin-left:100px;"><%= mail_to "tristan@lawofthings.com", "(Contact)", encode:"hex" %></span></p>	
+			</div>
+		</div>
+	</div>
+</body>
+</html>

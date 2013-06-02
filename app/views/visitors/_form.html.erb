@@ -1,0 +1,7 @@
+<h2>Enter your e-mail to receive 4 ways the Internet of Things will transform the way you live (and die)!</h2>
+<div style="text-align:center;">
+<%= form_for(@visitor, remote: true, html: {class: "form-inline"}) do |f| %>
+	<%= f.text_field :email %>
+	<%= f.submit "Submit", class: 'btn btn-primary' %>
+<% end %>
+</div>
