@@ -6,6 +6,7 @@
 #  next       :integer
 #  prev       :integer
 #  video_id   :integer
+#  clip_id    :integer
 #  when       :float
 #  length     :float
 #  start      :float

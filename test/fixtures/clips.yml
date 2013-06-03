@@ -4,7 +4,7 @@
 #
 #  id         :integer          not null, primary key
 #  url        :string(255)
-#  path_id    :integer
+#  name       :string(255)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

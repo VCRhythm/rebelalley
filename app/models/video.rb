@@ -15,8 +15,14 @@ class Video < ActiveRecord::Base
   has_many :paths
   has_many :clips, through: :paths
 
+  has_many :audio_paths
+  has_many :clips, through: :audio_paths
+
     def length
 	self.paths.count
+    end
+    def audio_length
+	self.audio_paths.count
     end
 
 end

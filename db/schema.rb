@@ -11,7 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130530163818) do
+ActiveRecord::Schema.define(:version => 20130603163455) do
+
+  create_table "audio_paths", :force => true do |t|
+    t.integer  "next"
+    t.integer  "prev"
+    t.integer  "video_id"
+    t.integer  "clip_id"
+    t.float    "when"
+    t.float    "length"
+    t.float    "start"
+    t.float    "end"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "clips", :force => true do |t|
     t.string   "url"

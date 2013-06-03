@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  next: 1
+  prev: 1
+  video_id: 1
+  when: 1.5
+  length: 1.5
+  start: 1.5
+  end: 1.5
+
+two:
+  next: 1
+  prev: 1
+  video_id: 1
+  when: 1.5
+  length: 1.5
+  start: 1.5
+  end: 1.5

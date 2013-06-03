@@ -64,11 +64,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mediaelement_rails (0.5.1)
-      jquery-rails (>= 1.0)
-      railties (>= 3.1)
     mime-types (1.23)
-    multi_json (1.7.4)
+    multi_json (1.7.5)
     netrc (0.7.7)
     pg (0.15.1)
     polyglot (0.3.3)
@@ -129,7 +126,6 @@ DEPENDENCIES
   coffee-rails
   heroku
   jquery-rails
-  mediaelement_rails
   pg
   rails
   sass-rails

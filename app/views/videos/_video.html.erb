@@ -1,12 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 <video autoplay id="myVideo"></video>
+<audio id="myAudio"></audio>
 <p id="clips" data-length='<%=@video.length%>'>
   <b>Clips:</b>
   <% @video.paths.each do |path| %>
     <span id='vidUrl<%=@videoCount%>' data-start='<%=path.start%>' data-end='<%=path.end%>'><%= path.clip.url %></span>
     <% @videoCount+=1 %>
   <% end %>
+</p>
+<p id="audio_clips" data-length='<%=@video.audio_length%>'>
+  <b>Audio:</b>
+  <% @video.audio_paths.each do |path| %>
+    <span id='audUrl<%=@audioCount%>' data-start='<%=path.start%>' data-end='<%=path.end%>'><%=path.clip.url %></span>
+    <% @audioCount+=1 %>
+  <% end %>
+</p>
 <p>
   <b>Name:</b>
   <%= @video.name %>
