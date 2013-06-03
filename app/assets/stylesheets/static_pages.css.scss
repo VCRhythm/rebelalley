@@ -3,29 +3,46 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import "bootstrap";
-
+@import url(http://fonts.googleapis.com/css?family=Quantico|Merriweather+Sans:400,700);
 html,
 body{
 	height: 100%;
-	background-color:rgb(238,238,238);
+	background-color:black;
 }
 
+.body-container{
+	top:50px;
+	position:relative;
+	margin:0;
+}
+h1{
+	font-size:3em;
+	color:white;
+	font-family:'Merriweather Sans', sans-serif;	
+}
+small{
+	color:white;
+}
 #wrap{
 	min-height:100%;
 	height: auto !important;
 	height:100%;
 	margin: 0 auto -60px;
 }
-
+#push{
+	border-top:white solid 5px;
+	margin-top:10px;
+}
 #push,
 #footer{
 	height:60px;
 }
 
 #footer{
-	background-color: white;
-	padding-top:20px;
+	background-color: black;
+	color:white;
 	padding-left:100px;
+	padding-right:100px;
 }
 
 #footer .muted{

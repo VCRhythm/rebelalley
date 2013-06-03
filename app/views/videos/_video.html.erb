@@ -1,32 +1,39 @@
-<p id="notice"><%= notice %></p>
-
-<video autoplay id="myVideo"></video>
-<audio id="myAudio"></audio>
-<p id="clips" data-length='<%=@video.length%>'>
-  <b>Clips:</b>
-  <% @video.paths.each do |path| %>
-    <span id='vidUrl<%=@videoCount%>' data-start='<%=path.start%>' data-end='<%=path.end%>'><%= path.clip.url %></span>
-    <% @videoCount+=1 %>
-  <% end %>
-</p>
-<p id="audio_clips" data-length='<%=@video.audio_length%>'>
-  <b>Audio:</b>
-  <% @video.audio_paths.each do |path| %>
-    <span id='audUrl<%=@audioCount%>' data-start='<%=path.start%>' data-end='<%=path.end%>'><%=path.clip.url %></span>
-    <% @audioCount+=1 %>
-  <% end %>
-</p>
-<p>
-  <b>Name:</b>
-  <%= @video.name %>
-</p>
-
-<p>
-  <b>Author:</b>
-  <%= @video.author %>
-</p>
-
-<p>
-  <b>Vote:</b>
-  <%= @video.vote %>
-</p>
+<div class="row-fluid">
+<div class="span12" style="margin-left:auto; margin-right:auto; text-align:center;">
+	<p id="notice"><%= notice %></p>
+	<video autoplay id="myVideo"></video>
+	<audio id="myAudio"></audio>
+</div>
+</div>
+<div class="row-fluid">
+<div class="span3 left-main"></div>
+<div class="span6" style="background-color:white;">
+	<p id="clips" data-length='<%=@video.length%>'>
+	  <b>Clips:</b>
+	  <% @video.paths.each do |path| %>
+	    <span id='vidUrl<%=@videoCount%>' data-start='<%=path.start%>' data-end='<%=path.end%>'><%= path.clip.url %></span>
+	    <% @videoCount+=1 %>
+	  <% end %>
+	</p>
+	<p id="audio_clips" data-length='<%=@video.audio_length%>'>
+	  <b>Audio:</b>
+	  <% @video.audio_paths.each do |path| %>
+	    <span id='audUrl<%=@audioCount%>' data-start='<%=path.start%>' data-end='<%=path.end%>'><%=path.clip.url %></span>
+	    <% @audioCount+=1 %>
+	  <% end %>
+	</p>
+	<p>
+	  <b>Name:</b>
+	  <%= @video.name %>
+	</p>
+	<p>
+	  <b>Author:</b>
+	  <%= @video.author %>
+	</p>
+	<p>
+	  <b>Vote:</b>
+	  <%= @video.vote %>
+	</p>
+</div>
+<div class="span3 right-main"></div>
+</div>
