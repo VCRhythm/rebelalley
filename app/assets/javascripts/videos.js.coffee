@@ -9,7 +9,7 @@ $ ->
 
 	audioNext = ->
 		a++
-		if a < videoCount
+		if a < audioCount
 			audioPlay a
 		
 	videoPlay = (videoNum) ->
@@ -20,6 +20,8 @@ $ ->
 		v++
 		if v < videoCount
 			videoPlay v
+		else
+			$('#videoCanvas').toggle()
 	v=0
 	a=0
 	$video=$("#myVideo")
