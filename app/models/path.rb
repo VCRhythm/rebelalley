@@ -17,6 +17,7 @@
 
 class Path < ActiveRecord::Base
   attr_accessible :clip_id, :next, :prev, :video_id, :when
+  default_scope order('id ASC')
   belongs_to :clip
   belongs_to :video
 end
