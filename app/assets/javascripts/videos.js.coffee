@@ -2,8 +2,8 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 $ ->
-	audioLoad = (audioNum, audioBox) ->
-		audioBox.attr 'src', '/assets/'+audioSource[audioNum]+'.mp3#t='+audioStart[audioNum]+','+audioEnd[audioNum]
+	audioLoad = (audioBox) ->
+		audioBox.attr 'src', '/assets/'+audioSource[a]+'.mp3#t='+audioStart[a]+','+audioEnd[a]
 
 	audioPlay = (audioBox) ->
 		audioBox.trigger 'play'
@@ -11,11 +11,11 @@ $ ->
 
 	audioPreload = (audioBox) ->
 		if a < audioCount
-			audioLoad a, audioBox
+			audioLoad audioBox
 	
-	audioNext = ->
-		audioPlay $audio2
-		audioPreload $audio
+	audioNext = (audioBox, preloadBox) ->
+		audioPlay audioBox
+		audioPreload preloadBox
 		
 	videoPlay = (videoNum) ->
 		$video.attr "src", '/assets/'+videoSource[videoNum]+'.webm#t='+videoStart[videoNum]+','+videoEnd[videoNum]
@@ -30,8 +30,8 @@ $ ->
 	v=0
 	a=0
 	$video=$("#myVideo")
-	$audio=$("#myAudio")
-	$audio2=$("#myAudio2")
+	$audio = $("#myAudio")
+	$audio2 = $("#myAudio2")
 	videoCount = $("#clips").data 'length'
 	audioCount = $("#audio_clips").data 'length'
 	videoSource = new Array()
@@ -51,9 +51,8 @@ $ ->
 		audioStart[r]=$audioURL.data 'start'
 		audioEnd[r]=$audioURL.data 'end'
 	videoPlay 0
-	audioLoad 0, $audio
-	audioPlay $audio 
-	audioPreload $audio2
+	audioLoad $audio
+	audioNext $audio, $audio2
 	$video.bind "pause", videoNext
-	$audio.bind "pause", audioNext 
-#	$("#myAudio2").bind "pause", audioNext 1
+	$audio.bind "pause", (e) -> audioNext $audio2, $audio
+	$audio2.bind "pause", (e) -> audioNext $audio, $audio2
