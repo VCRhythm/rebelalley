@@ -29,18 +29,18 @@ small{
 	height:100%;
 	margin: 0 auto -60px;
 }
+
 #push{
-	border-top:white solid 5px;
-	margin-top:10px;
-}
-#push,
-#footer{
-	height:60px;
-}
+	height:110px;
+	}
 
 #footer{
+	height:80px;
+	border-top:white solid 5px;
+	margin-top:30px;
 	background-color: black;
 	color:white;
+	padding-top:10px;
 	padding-left:100px;
 	padding-right:100px;
 }

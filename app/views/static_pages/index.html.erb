@@ -5,6 +5,7 @@
   </div>
 </div>
 <div class="body-container">
-	<%= render @video %>
-	<div class="row-fluid">
+	<% if @video %>
+		<%= render @video %>
+	<% end %>
 </div>

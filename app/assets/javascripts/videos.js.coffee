@@ -2,13 +2,10 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 $ ->
-	syncAudio = ->
-		$audio.play
 
 	audioPlay = (audioNum) ->
 		$audio.attr "src", '/assets/'+audioSource[audioNum]+'.mp3#t='+audioStart[audioNum]+','+audioEnd[audioNum]	
-		$audio.load
-		syncAudio
+		$audio.trigger 'play'
 
 	audioNext = ->
 		a++
