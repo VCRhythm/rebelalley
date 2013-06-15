@@ -18,10 +18,9 @@ ActiveRecord::Schema.define(:version => 20130603163455) do
     t.integer  "prev"
     t.integer  "video_id"
     t.integer  "clip_id"
-    t.float    "when"
-    t.float    "length"
     t.float    "start"
     t.float    "end"
+    t.float    "go"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -56,10 +55,9 @@ ActiveRecord::Schema.define(:version => 20130603163455) do
     t.integer  "prev"
     t.integer  "video_id"
     t.integer  "clip_id"
-    t.float    "when"
-    t.float    "length"
     t.float    "start"
     t.float    "end"
+    t.float    "go"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -73,9 +71,9 @@ ActiveRecord::Schema.define(:version => 20130603163455) do
   create_table "videos", :force => true do |t|
     t.string   "name"
     t.string   "author"
-    t.integer  "vote"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "vote",       :default => 0
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
   create_table "visitors", :force => true do |t|

@@ -5,6 +5,7 @@ Iot::Application.routes.draw do
 
 #  resources :paths
 
+  match '/add_path' => 'videos#add_path'
 
   resources :videos
 

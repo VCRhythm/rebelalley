@@ -1,20 +1,14 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @video.name %>
-</p>
-
-<p>
-  <b>Author:</b>
-  <%= @video.author %>
-</p>
-
-<p>
-  <b>Vote:</b>
-  <%= @video.vote %>
-</p>
-
-
+<div class="row-fluid" style="min-height:50px; position:fixed; z-index:999; padding-top:10px; background-color:black;">
+  <div class="span1"></div>
+  <div class="span11">
+    <h1 style="display:inline;">Rebel Alley</h1><p class="lead" style="color:#990000; display:inline;">The original Arrested Development remix site</p>.
+  </div>
+</div>
+<div class="body-container">
+	<% if @video %>
+		<%= render @video %>
+	<% end %>
+</div>
 <%= link_to 'Edit', edit_video_path(@video) %> |
 <%= link_to 'Back', videos_path %>

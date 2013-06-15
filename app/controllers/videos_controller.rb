@@ -21,10 +21,15 @@ class VideosController < ApplicationController
     end
   end
 
+  def add_path
+    render partial: 'shared/add-path'
+  end
+
   # GET /videos/new
   # GET /videos/new.json
   def new
     @video = Video.new
+    @video.paths.build
 
     respond_to do |format|
       format.html # new.html.erb

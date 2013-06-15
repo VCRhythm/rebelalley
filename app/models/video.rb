@@ -11,10 +11,11 @@
 #
 
 class Video < ActiveRecord::Base
-  attr_accessible :author, :name, :vote
+  attr_accessible :author, :name, :vote, :paths_attributes
   has_many :paths
-  has_many :clips, through: :paths
+  accepts_nested_attributes_for :paths
 
+  has_many :clips, through: :paths
   has_many :audio_paths
   has_many :clips, through: :audio_paths
 

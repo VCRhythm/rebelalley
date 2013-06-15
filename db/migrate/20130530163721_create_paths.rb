@@ -5,10 +5,9 @@ class CreatePaths < ActiveRecord::Migration
       t.integer :prev
       t.integer :video_id
       t.integer :clip_id
-      t.float :when
-      t.float :length
       t.float :start
       t.float :end
+      t.float :go
 
       t.timestamps
     end

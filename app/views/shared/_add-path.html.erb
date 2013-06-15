@@ -1,0 +1,19 @@
+<div id='new-path'>
+<%= f.fields_for :paths do |p| %>
+  <div class="field">
+    <%= p.collection_select :clip_id, Clip.all, :id, :name %>
+  </div>
+  <div class="go">
+    <%= p.label :go %><br />
+    <%= p.number_field :start, options= {min:0} %>
+  </div>
+  <div class="field">
+    <%= p.label :start %><br />
+    <%= p.number_field :start, options = {min:0} %>
+  </div>
+  <div class="field">
+    <%= p.label :end %><br />
+    <%= p.number_field :end, options = {min:0} %>
+  </div>
+<% end %>
+</div>

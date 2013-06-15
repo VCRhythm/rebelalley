@@ -16,8 +16,13 @@
 #
 
 class Path < ActiveRecord::Base
-  attr_accessible :clip_id, :next, :prev, :video_id, :when
-  default_scope order('id ASC')
+  attr_accessible :clip_id, :start, :end
+  default_scope order 'go ASC'
   belongs_to :clip
   belongs_to :video
+
+  def length
+    self.end-self.start
+  end
+
 end
