@@ -9,18 +9,29 @@
       </ul>
     </div>
   <% end %>
+	<div class="row-fluid">
+	<div class="span12">
+	  <div class="field">
+ 	   <%= f.label :name %><br />
+ 	   <%= f.text_field :name %>
+		</div>
+ 	 	<div class="field">
+   	 <%= f.label :author %><br />
+   	 <%= f.text_field :author %>
+  	</div>
+	</div>
+	</div>
+	<div class="row-fluid">
+		<div class="span6">
+ 			<div id="paths"></div>
+		 	<%= add_object_link("New Path", f, Path.new, "add-path", "#paths") %>
+		</div>
+		<div class="span6">
+			<div id="audio-paths"></div>
+			<%= add_object_link("New Audio Path", f, AudioPath.new, "add-audio-path", "#audio-paths") %>
+		</div>
+	</div>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :author %><br />
-    <%= f.text_field :author %>
-  </div>
-
-  <div id="paths"></div>
-  <%= add_object_link("New Path", f, Path.new, "add-path", "#paths") %>
 
   <div class="actions">
     <%= f.submit %>

@@ -1,6 +1,6 @@
-<%= form.fields_for :paths, path, child_index: (path.new_record? ? "index_to_replace_with_js" : nil) do |p| %>
+<%= form.fields_for :audio_paths, path, child_index: (path.new_record? ? "index_to_replace_with_js" : nil) do |p| %>
   <div class="field">
-    <%= p.collection_select :clip_id, Clip.where(bent:"video"), :id, :name %>
+    <%= p.collection_select :clip_id, Clip.where(bent:"audio"), :id, :name %>
   </div>
   <div class="field">
     <%= p.label :go %><br />

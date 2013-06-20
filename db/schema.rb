@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(:version => 20130619225426) do
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.string   "type"
+    t.string   "bent"
   end
 
   create_table "issues", :force => true do |t|
