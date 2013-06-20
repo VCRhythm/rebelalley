@@ -11,13 +11,14 @@
 #
 
 class Video < ActiveRecord::Base
-  attr_accessible :author, :name, :vote, :paths_attributes
+  attr_accessible :author, :name, :vote, :paths_attributes, :audio_paths_attributes
   has_many :paths
   accepts_nested_attributes_for :paths, allow_destroy:true
 
   has_many :clips, through: :paths
   has_many :audio_paths
   has_many :clips, through: :audio_paths
+	accepts_nested_attributes_for :audio_paths, allow_destroy:true
 
     def length
 	self.paths.count

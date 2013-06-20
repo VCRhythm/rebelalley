@@ -11,7 +11,7 @@
 #
 
 class Clip < ActiveRecord::Base
-  attr_accessible :url, :name
+  attr_accessible :url, :name, :bent
   has_many :paths
   has_many :videos, through: :paths
 end

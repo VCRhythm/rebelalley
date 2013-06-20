@@ -15,7 +15,7 @@
 #
 
 class AudioPath < ActiveRecord::Base
-  attr_accessible :cip_id, :end, :length, :next, :prev, :start, :video_id, :when
+  attr_accessible :clip_id, :end, :go, :next, :prev, :start, :video_id
 
   default_scope order('go ASC')
   belongs_to :clip
