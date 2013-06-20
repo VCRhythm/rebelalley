@@ -5,7 +5,7 @@
 #  id         :integer          not null, primary key
 #  name       :string(255)
 #  author     :string(255)
-#  vote       :integer
+#  vote       :integer          default(0)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

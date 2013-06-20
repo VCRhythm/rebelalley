@@ -14,6 +14,8 @@ class VideosController < ApplicationController
   # GET /videos/1.json
   def show
     @video = Video.find(params[:id])
+    @videoCount=0
+    @audioCount=0
 
     respond_to do |format|
       format.html # show.html.erb

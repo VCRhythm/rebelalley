@@ -1,0 +1,18 @@
+<%= form.fields_for :paths, path, child_index: (path.new_record? ? "index_to_replace_with_js" : nil) do |p| %>
+  <div class="field">
+    <%= p.collection_select :clip_id, Clip.all, :id, :name %>
+  </div>
+  <div class="field">
+    <%= p.label :go %><br />
+    <%= p.number_field :go, options= {min:0} %>
+  </div>
+  <div class="field">
+    <%= p.label :start %><br />
+    <%= p.number_field :start, options = {min:0} %>
+  </div>
+  <div class="field">
+    <%= p.label :end %><br />
+    <%= p.number_field :end, options = {min:0} %>
+  </div>
+  <%= link_to 'Remove', '#', class: 'numerous-remove' %>
+<% end %>

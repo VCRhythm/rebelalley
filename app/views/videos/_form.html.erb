@@ -18,11 +18,11 @@
     <%= f.label :author %><br />
     <%= f.text_field :author %>
   </div>
-  <div id="addPaths">
-    <%= render 'shared/add-path', f:f %>
-  </div>
+
+  <div id="paths"></div>
+  <%= add_object_link("New Path", f, Path.new, "add-path", "#paths") %>
+
   <div class="actions">
-    <%= button_tag 'Add Path', type: 'button', class: 'add-path-button' %>
     <%= f.submit %>
   </div>
 <% end %>

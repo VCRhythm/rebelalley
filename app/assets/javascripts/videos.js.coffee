@@ -2,10 +2,6 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 $ ->
-  $('.add-path-button').bind 'click', (e) ->
-    newpath = $('#new-path').html()
-    $('#addPaths').append newpath
-
   audioLoad = (audioBox) ->
     audioBox.attr 'src', '/assets/'+audioSource[a]+'.mp3#t='+audioStart[a]+','+audioEnd[a]
 

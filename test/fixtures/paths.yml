@@ -7,10 +7,9 @@
 #  prev       :integer
 #  video_id   :integer
 #  clip_id    :integer
-#  when       :float
-#  length     :float
 #  start      :float
 #  end        :float
+#  go         :float
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
